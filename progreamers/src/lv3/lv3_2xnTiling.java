@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class lv3_2_2xnTiling {
+public class lv3_2xnTiling {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		//재귀로 풀면 타임아웃날듯 
 		//dp로
