@@ -9,7 +9,7 @@ import java.io.OutputStreamWriter;
 public class lv3_2xnTiling {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		//재귀로 풀면 타임아웃날듯 
-		//dp로
+		//dp ㄱ
 //		1	1,0				1
 //		2	2,0	0,2			2
 //		3	3,0	1,2	1,2		3
