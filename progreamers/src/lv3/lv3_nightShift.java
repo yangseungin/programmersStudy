@@ -24,7 +24,7 @@ public class lv3_nightShift {
 
 	}
 
-	
+	 
 	// 정확성은 올 성공했는데 효율성 0점... 테스트1부터 시간초과난다... 이유는?
 	public static long solution(int n, int[] works) {
 		long answer = 0;
