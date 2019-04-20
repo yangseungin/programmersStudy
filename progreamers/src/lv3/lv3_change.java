@@ -11,28 +11,39 @@ public class lv3_change {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		//슬러줘야할 금액, 동전이 들어간 배열을 줄 거슬러줄수있는 방법의 개수리턴
 		
-		
-		/*		0	1	2	3	4	5
-		 * 1	0	1	2	3	4	5
-		 * 2	0	0	1		2
-		 * 5	0					1
-		
+		/*	
+		 * 		1	2	3	4	5	6	7	8	9	10
+		 * 0	1	0	0	0	0	0	0	0	0	0
+		 * 1	1	1	1	1	1	1	1	1	1	1
+		 * 2	1	2	2	3	3	4	4	5	5	6
+		 * 5	1	2	2	3	4	5	6	7	8	10	
 		
 */		
 		
 		//int n=Integer.parseInt(br.readLine());
 		int n=5;
 		int[] money = {1,2,5};
+		bw.write(String.valueOf(solution(n,money)));
+		bw.flush();
 		
 		
 	
 	}
-	public int solution(int n,int[] money){
-		int answer=0;
+	public static int solution(int n,int[] money){
+		int[] arr = new int[1000001];
+		int len= money.length;
 		
-		return answer;
+		arr[0]=1;
+		for(int i=0;i<len;i++) {
+			for(int j=0;j<=n;j++) {
+				if(j>=money[i]) {
+					arr[j]+=arr[j-money[i]];
+				}				
+			}
+		}		
+		
+		return arr[n];
 	}
 
 }
