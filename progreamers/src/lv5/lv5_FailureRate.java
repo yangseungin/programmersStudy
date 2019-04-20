@@ -12,7 +12,7 @@ public class lv5_FailureRate {
 		int N=5;	//전체스테이지
 		int[] stages = {2,1,2,6,2,4,3,3};//1이상 N+1이하의 자연수  //stage 	길이는 1이상 200000 이
 		
-		System.out.println(solution(N,stages));
+		solution(N,stages);
 		
 	}
 
@@ -22,56 +22,20 @@ public class lv5_FailureRate {
 		int len= stages.length;
 		int Ncount=0;
 
-		ArrayList<Float> list = new ArrayList<>();
 		
 		for(int i=0;i<N;i++){
 			Ncount=count(stages,i+1);
 			fail[i]=(float)Ncount/len;
-			list.add((float)Ncount/len);
 			len-=Ncount;
 			
 		}
 		for(int i=0;i<N;i++){
 			System.out.println(fail[i]);
 		}
-		System.out.println("========");
-		for(int i=0;i<N;i++){
-			System.out.println(list.get(i));
-		}
-		Collections.sort(list, new Comparator<Float>() {
-
-			@Override
-			public int compare(Float o1, Float o2) {
-				
-				// TODO Auto-generated method stub
-				return (int)(o1-o2);
-			}
-		});
+		
 		
 		
 		return answer;
-	}
-	public class indexSort{
-		public int index;
-		public float value;
-		public indexSort(int index, float value) {
-			super();
-			this.index = index;
-			this.value = value;
-		}
-		public int getIndex() {
-			return index;
-		}
-		public void setIndex(int index) {
-			this.index = index;
-		}
-		public float getValue() {
-			return value;
-		}
-		public void setValue(float value) {
-			this.value = value;
-		}
-		
 	}
 	public static int count(int[] arr,int n){
 		boolean flag=false;

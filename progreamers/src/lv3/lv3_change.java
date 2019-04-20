@@ -38,7 +38,7 @@ public class lv3_change {
 		for(int i=0;i<len;i++) {
 			for(int j=0;j<=n;j++) {
 				if(j>=money[i]) {
-					arr[j]+=arr[j-money[i]];
+					arr[j]+=arr[j-money[i]]%1000000007;
 				}				
 			}
 		}		
