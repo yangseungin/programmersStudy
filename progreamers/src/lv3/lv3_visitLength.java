@@ -23,50 +23,69 @@ public class lv3_visitLength {
 	}
 
 	public static int solution(String dirs) {
-		int answer = 7;
-		int[][][][] arr = new int[10][10][10][10];
+		int answer = 0;
+		int[][][] arr = new int[11][11][4];
 		int len = dirs.length();
-		int x1=5,y1=5,x2=5,y2=5;
+		int x=5,y=5;	//L= 0 R=1 U=2 D=3
+		int count=0;
 
 		for (int i = 0; i < len; i++) {
 			switch (dirs.charAt(i)) {
 			case 'L':
-				if (x1 > 0) {
-					x1--;
-					arr[x1][y1][x2][y2]++;
-					arr[x2][y2][x1][y1]++;
-					System.out.println("왼쪽");
+				if (x > 0) {
+					if(arr[x][y][0]==0){
+					count++;
+					arr[x][y][0]=1;
+					arr[--x][y][1]=1;
+					}else{
+						x--;
+					}
+					
+				//	System.out.println("왼쪽");
 				}
 				break;
 			case 'R':
-				if (x1 < 10) {
-					x1++;
-					arr[x1][y1][x2][y2]++;
-					arr[x2][y2][x1][y1]++;
-					System.out.println("오른쪽");
+				if (x < 10) {
+					if(arr[x][y][1]==0){
+						count++;
+						arr[x][y][1]=1;
+						arr[++x][y][0]=1;
+					}else{
+						x++;
+					}
+					
+				//	System.out.println("오른쪽");
 				}
 				break;
 			case 'U':
-				if (y1 < 10) {
-					y1++;
-					arr[x1][y1][x2][y2]++;
-					arr[x2][y2][x1][y1]++;
-					System.out.println("위쪽");
+				if (y < 10) {
+					if(arr[x][y][2]==0){
+						count++;
+						arr[x][y][2]=1;
+						arr[x][++y][3]=1;
+					}else{
+						y++;
+					}
+					
+					//System.out.println("위쪽");
 				}
 				break;
 			case 'D':
-				if (y1 > 0) {
-					y1--;
-					arr[x1][y1][x2][y2]++;
-					arr[x2][y2][x1][y1]++;
-					System.out.println("아래쪽");
+				if (y > 0) {
+					if(arr[x][y][3]==0){
+						count++;
+						arr[x][y][3]=1;
+						arr[x][--y][2]=1;
+					}else{
+						y--;
+					}
+				//	System.out.println("아래쪽");
 				}
 				break;
 
 			}
 		}
-		
-		
+		answer=count;
 
 		return answer;
 	}
