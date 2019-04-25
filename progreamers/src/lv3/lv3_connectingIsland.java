@@ -40,20 +40,28 @@ public class lv3_connectingIsland {
 
 			arr[start][end]=cost;
 			arr[end][start]=cost;
+			// 아아아아아아아아아 뭔가 하나를 더추가해야함
+			// 여기에 연결됬다 안됬다 하는 정보를 담을수있는 변수를 저장할만한것을 하나 만들어야한다
+			
+			//아니면 그래프로 좀 갈아 엎어야되
+			//집가서..
 			
 			
 		}
 		System.out.println("--------------");
 		for(int i=0;i<n;i++){
 			for(int j=0;j<n;j++){
-				System.out.print(arr[i][j]+" ");
+				System.out.print(arr[i][j]);
 			}
 			System.out.println();
 			
 		}
 		
 		for(int i=0;i<costs.length;i++){
-			
+			for(int j=0;j<n-1;j++){
+				
+				
+			}
 			answer+=costs[i][2];
 			
 			
