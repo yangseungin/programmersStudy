@@ -3,7 +3,7 @@ package lv3;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class lv3_connectingIsland {
+public class connectingIsland {
 	public static void main(String[] args) {
 
 		// 음 이문제는 연결정보 넣고 시작점에서 짧은거리 이동하면서 값더하면 될것같

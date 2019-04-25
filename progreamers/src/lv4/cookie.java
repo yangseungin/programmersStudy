@@ -1,6 +1,6 @@
 package lv4;
 
-public class lv4_cookie {
+public class cookie {
 	public static void main(String[] args) {
 	
 		int[] cookie = {1,1,2,3};

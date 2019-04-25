@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 
-public class lv5_FailureRate {
+public class failureRate {
 	public static void main(String[] args) {
 		//실패율= 스테이지에 달했으나 못깬놈/ 스테이지 도달한애
 		int N=5;	//전체스테이지

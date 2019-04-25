@@ -2,7 +2,7 @@ package lv2;
 
 import java.util.Arrays;
 
-public class lv2_lifeBoat {
+public class lifeBoat {
 	public static void main(String[] args) {
 		/*
 		 * 이문제는 음 탐욕법이라 적혀있어서 탐욕으로 일단 풀어야는디 하나씩 더하면서 100보다작으면 반복 커지면 answer++ ->
