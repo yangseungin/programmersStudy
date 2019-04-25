@@ -1,1 +1,1 @@
-# programmersStudy
+# algo로 통합
